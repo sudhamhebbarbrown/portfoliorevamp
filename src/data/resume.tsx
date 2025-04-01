@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, BriefcaseBusiness, FolderGit, School } from "lucide-react";
+import { HomeIcon, BriefcaseBusiness, FolderGit, School, BookText } from "lucide-react";
 
 export const DATA = {
   name: "Sudham Hebbar",
@@ -43,7 +43,8 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/#work", icon: BriefcaseBusiness, label: "Work" },
     { href: "/#education", icon: School, label: "Education" },
-    { href: "/#projects", icon: FolderGit, label: "Blog" },
+    { href: "/#projects", icon: FolderGit, label: "Projects" },
+    { href: "https://drive.google.com/file/d/1B-Olr8i_hGHtD-fLjldysy1dNxCPY86u/view?usp=sharing", icon: BookText, label: "Resume" },
   ],
   contact: {
     email: "sudham_hebbar@brown.edu",

@@ -43,8 +43,11 @@ export function ProjectCard({
   return (
     <Card className={"flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"}>
       <Link
+
         href={href || "#"}
         className={cn("block cursor-pointer", className)}
+        target={href ? "_blank" : ""}
+        rel={href ? "noopener noreferrer" : ""}
       >
         {video && (
           <video
