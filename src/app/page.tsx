@@ -173,7 +173,7 @@ export default function Page() {
                 >
                   reach out on Twitter
                 </Link>{" "}
-                and I'll get back to you as soon as possible.
+                and I&apos;ll get back to you as soon as possible.
               </p>
             </div>
           </BlurFade>
