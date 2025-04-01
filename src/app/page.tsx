@@ -73,7 +73,6 @@ export default function Page() {
             </BlurFade>
           ))}
         </div>
-
       </section>
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
@@ -127,7 +126,7 @@ export default function Page() {
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I&apos;ve worked on a variety of projects, from simple
-                  websites to backend services. Here are a few of my
+                  websites to complex web applications. Here are a few of my
                   favorites.
                 </p>
               </div>
@@ -173,7 +172,7 @@ export default function Page() {
                 >
                   reach out on Twitter
                 </Link>{" "}
-                and I&apos;ll get back to you as soon as possible.
+                and I'll get back to you as soon as possible.
               </p>
             </div>
           </BlurFade>
