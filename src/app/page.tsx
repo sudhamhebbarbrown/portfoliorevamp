@@ -8,10 +8,13 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { ContactForm } from "@/components/contact-form";
-import Script from "next/script";
+import { BlogCard } from '@/components/blog-card'
+import { getBlogPosts } from "@/data/blog";
+// import Script from "next/script";
 const BLUR_FADE_DELAY = 0.04;
 
-export default function Page() {
+export default async function Page() {
+  const blogposts = await getBlogPosts();
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10 smooth-scroll">
       <section id="hero">
@@ -154,6 +157,42 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <section id="blogs">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Blogs
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Here's some of my blog posts
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  This is a collection of my thoughts; some technical, some philosophical and some based on my personal life!
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 12}>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-1 max-w-[800px] mx-auto">
+              {blogposts.map((obj) => (
+                <BlogCard
+                  key={obj.slug}
+                  title={obj.metadata.title}
+                  href={`/blog/${obj.slug}`}
+                  date={obj.metadata.publishedAt}
+                />
+              ))}
+            </div>
+          </BlurFade>
+
+        </div>
+      </section>
+
+
+
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>

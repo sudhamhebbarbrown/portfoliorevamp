@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, BriefcaseBusiness, FolderGit, School, BookText } from "lucide-react";
+import { HomeIcon, BriefcaseBusiness, FolderGit, School, BookText, PenTool } from "lucide-react";
 
 export const DATA = {
   name: "Sudham Hebbar",
@@ -41,6 +41,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/blog", icon: PenTool, label: "Blog" },
     { href: "/#work", icon: BriefcaseBusiness, label: "Work" },
     { href: "/#education", icon: School, label: "Education" },
     { href: "/#projects", icon: FolderGit, label: "Projects" },
@@ -52,7 +53,7 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/sudhamhebbar",
+        url: "https://github.com/sudhamhebbarbrown",
         icon: Icons.github,
 
         navbar: true,
