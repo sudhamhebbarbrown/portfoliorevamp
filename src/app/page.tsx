@@ -167,7 +167,7 @@ export default async function Page() {
                   Blogs
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Here's some of my blog posts
+                  Here are some of my blog posts
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   This is a collection of my thoughts; some technical, some philosophical and some based on my personal life!
